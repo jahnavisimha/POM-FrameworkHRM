@@ -1,0 +1,8 @@
+Application is opened
+Wait for 3 seconds
+Login completed
+Title is matched 
+Wait for 3 seconds
+Employee added successfully
+Wait for 3 seconds
+Logout is successful

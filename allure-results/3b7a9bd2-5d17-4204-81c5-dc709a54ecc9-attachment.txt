@@ -1,0 +1,2 @@
+Application is opened
+Wait for 3 seconds

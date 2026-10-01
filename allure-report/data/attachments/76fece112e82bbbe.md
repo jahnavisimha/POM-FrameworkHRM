@@ -1,0 +1,1015 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: TC003.spec.ts >> TC003 search Employee
+- Location: tests\TC003.spec.ts:9:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.selectOption: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('//iframe[@id=\'rightMenu\']').contentFrame().locator('//select[@name=\'loc_code\']')
+    - locator resolved to <select id="loc_code" name="loc_code">…</select>
+  - attempting select option action
+    2 × waiting for element to be visible and enabled
+      - did not find some options
+    - retrying select option action
+    - waiting 20ms
+    2 × waiting for element to be visible and enabled
+      - did not find some options
+    - retrying select option action
+      - waiting 100ms
+    44 × waiting for element to be visible and enabled
+       - did not find some options
+     - retrying select option action
+       - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f1e1]:
+  - list [ref=f1e5]:
+    - listitem [ref=f1e6]: Welcome sureshit
+    - listitem [ref=f1e7]:
+      - link "Change Password" [ref=f1e8] [cursor=pointer]:
+        - /url: ./lib/controllers/CentralController.php?mtcode=CPW&capturemode=updatemode&id=USR012
+    - listitem [ref=f1e9]:
+      - link "Logout" [ref=f1e10] [cursor=pointer]:
+        - /url: ./index.php?ACT=logout
+  - generic [ref=f1e11]:
+    - list:
+      - listitem [ref=f1e12] [cursor=pointer]:
+        - link "Admin" [ref=f1e13]:
+          - /url: ./index.php?menu_no_top=eim
+        - list [ref=f1e15]:
+          - listitem [ref=f1e16]:
+            - link "Company Info" [ref=f1e17]:
+              - /url: "#"
+            - list [ref=f1e19]:
+              - listitem [ref=f1e20]:
+                - link "General" [ref=f1e21]:
+                  - /url: index.php?uniqcode=GEN&menu_no_top=eim
+              - listitem [ref=f1e23]:
+                - link "Locations" [ref=f1e24]:
+                  - /url: index.php?uniqcode=LOC&menu_no_top=eim
+              - listitem [ref=f1e26]:
+                - link "Company Structure" [ref=f1e27]:
+                  - /url: index.php?uniqcode=CST&menu_no_top=eim
+              - listitem [ref=f1e29]:
+                - link "Company Property" [ref=f1e30]:
+                  - /url: index.php?uniqcode=TCP&menu_no_top=eim&pageNo=1
+          - listitem [ref=f1e32]:
+            - link "Job" [ref=f1e33]:
+              - /url: "#"
+            - list [ref=f1e35]:
+              - listitem [ref=f1e36]:
+                - link "Job Titles" [ref=f1e37]:
+                  - /url: index.php?uniqcode=JOB&menu_no_top=eim
+              - listitem [ref=f1e39]:
+                - link "Job Specifications" [ref=f1e40]:
+                  - /url: index.php?uniqcode=SPC&menu_no_top=eim
+              - listitem [ref=f1e42]:
+                - link "Pay Grades" [ref=f1e43]:
+                  - /url: index.php?uniqcode=SGR&menu_no_top=eim
+              - listitem [ref=f1e45]:
+                - link "Employment Status" [ref=f1e46]:
+                  - /url: index.php?uniqcode=EST&menu_no_top=eim
+              - listitem [ref=f1e48]:
+                - link "EEO Job Categories" [ref=f1e49]:
+                  - /url: index.php?uniqcode=EEC&menu_no_top=eim
+          - listitem [ref=f1e51]:
+            - link "Qualification" [ref=f1e52]:
+              - /url: "#"
+            - list [ref=f1e54]:
+              - listitem [ref=f1e55]:
+                - link "Education" [ref=f1e56]:
+                  - /url: index.php?uniqcode=EDU&menu_no_top=eim
+              - listitem [ref=f1e58]:
+                - link "Licenses" [ref=f1e59]:
+                  - /url: index.php?uniqcode=LIC&menu_no_top=eim
+          - listitem [ref=f1e61]:
+            - link "Skills" [ref=f1e62]:
+              - /url: "#"
+            - list [ref=f1e64]:
+              - listitem [ref=f1e65]:
+                - link "Skills" [ref=f1e66]:
+                  - /url: index.php?uniqcode=SKI&menu_no_top=eim
+              - listitem [ref=f1e68]:
+                - link "Languages" [ref=f1e69]:
+                  - /url: index.php?uniqcode=LAN&menu_no_top=eim
+          - listitem [ref=f1e71]:
+            - link "Memberships" [ref=f1e72]:
+              - /url: "#"
+            - list [ref=f1e74]:
+              - listitem [ref=f1e75]:
+                - link "Membership Types" [ref=f1e76]:
+                  - /url: index.php?uniqcode=MEM&menu_no_top=eim
+              - listitem [ref=f1e78]:
+                - link "Memberships" [ref=f1e79]:
+                  - /url: index.php?uniqcode=MME&menu_no_top=eim
+          - listitem [ref=f1e81]:
+            - link "Nationality & Race" [ref=f1e82]:
+              - /url: "#"
+            - list [ref=f1e84]:
+              - listitem [ref=f1e85]:
+                - link "Nationality" [ref=f1e86]:
+                  - /url: index.php?uniqcode=NAT&menu_no_top=eim
+              - listitem [ref=f1e88]:
+                - link "Ethnic Races" [ref=f1e89]:
+                  - /url: index.php?uniqcode=ETH&menu_no_top=eim
+          - listitem [ref=f1e91]:
+            - link "Users" [ref=f1e92]:
+              - /url: "#"
+            - list [ref=f1e94]:
+              - listitem [ref=f1e95]:
+                - link "HR Admin Users" [ref=f1e96]:
+                  - /url: index.php?uniqcode=USR&menu_no_top=eim&isAdmin=Yes
+              - listitem [ref=f1e98]:
+                - link "ESS Users" [ref=f1e99]:
+                  - /url: index.php?uniqcode=USR&menu_no_top=eim&isAdmin=No
+              - listitem [ref=f1e101]:
+                - link "Admin User Groups" [ref=f1e102]:
+                  - /url: index.php?uniqcode=USG&menu_no_top=eim
+          - listitem [ref=f1e104]:
+            - link "Email Notifications" [ref=f1e105]:
+              - /url: "#"
+            - list [ref=f1e107]:
+              - listitem [ref=f1e108]:
+                - link "Configuration" [ref=f1e109]:
+                  - /url: index.php?uniqcode=EMX&menu_no_top=eim
+              - listitem [ref=f1e111]:
+                - link "Subscribe" [ref=f1e112]:
+                  - /url: index.php?uniqcode=ENS&menu_no_top=eim
+          - listitem [ref=f1e114]:
+            - link "Project Info" [ref=f1e115]:
+              - /url: "#"
+            - list [ref=f1e117]:
+              - listitem [ref=f1e118]:
+                - link "Customers" [ref=f1e119]:
+                  - /url: index.php?uniqcode=CUS&menu_no_top=eim
+              - listitem [ref=f1e121]:
+                - link "Projects" [ref=f1e122]:
+                  - /url: index.php?uniqcode=PRJ&menu_no_top=eim
+              - listitem [ref=f1e124]:
+                - link "Project Activities" [ref=f1e125]:
+                  - /url: index.php?uniqcode=PAC&menu_no_top=eim
+          - listitem [ref=f1e127]:
+            - link "Data Import/Export" [ref=f1e128]:
+              - /url: "#"
+            - list [ref=f1e130]:
+              - listitem [ref=f1e131]:
+                - link "Define Custom Export" [ref=f1e132]:
+                  - /url: index.php?uniqcode=CEX&menu_no_top=eim
+              - listitem [ref=f1e134]:
+                - link "Export" [ref=f1e135]:
+                  - /url: index.php?uniqcode=CSE&menu_no_top=eim
+              - listitem [ref=f1e137]:
+                - link "Define Custom Import" [ref=f1e138]:
+                  - /url: index.php?uniqcode=CIM&menu_no_top=eim
+              - listitem [ref=f1e140]:
+                - link "Import" [ref=f1e141]:
+                  - /url: index.php?uniqcode=IMP&menu_no_top=eim
+          - listitem [ref=f1e143]:
+            - link "Custom Fields" [ref=f1e144]:
+              - /url: index.php?uniqcode=CTM&menu_no_top=eim
+      - listitem [ref=f1e146] [cursor=pointer]:
+        - link "PIM" [ref=f1e147]:
+          - /url: ./index.php?menu_no_top=hr
+        - list [ref=f1e149]:
+          - listitem [ref=f1e150]:
+            - link "Employee List" [ref=f1e151]:
+              - /url: ./lib/controllers/CentralController.php?reqcode=EMP&VIEW=MAIN&sortField=0&sortOrder0=ASC
+          - listitem [ref=f1e153]:
+            - link "Add Employee" [ref=f1e154]:
+              - /url: ./lib/controllers/CentralController.php?reqcode=EMP&capturemode=addmode
+      - listitem [ref=f1e156] [cursor=pointer]:
+        - link "Leave" [ref=f1e157]:
+          - /url: ./index.php?menu_no_top=leave
+        - list [ref=f1e159]:
+          - listitem [ref=f1e160]:
+            - link "Leave Summary" [ref=f1e161]:
+              - /url: "#"
+            - list [ref=f1e163]:
+              - listitem [ref=f1e164]:
+                - link "Employee Leave Summary" [ref=f1e165]:
+                  - /url: lib/controllers/CentralController.php?leavecode=Leave&action=Leave_Select_Employee_Leave_Summary
+          - listitem [ref=f1e167]:
+            - link "Define Days Off" [ref=f1e168]:
+              - /url: "#"
+            - list [ref=f1e170]:
+              - listitem [ref=f1e171]:
+                - link "Days Off" [ref=f1e172]:
+                  - /url: lib/controllers/CentralController.php?leavecode=Leave&action=Holiday_Weekend_List
+              - listitem [ref=f1e174]:
+                - link "Specific Holidays" [ref=f1e175]:
+                  - /url: lib/controllers/CentralController.php?leavecode=Leave&action=Holiday_Specific_List
+          - listitem [ref=f1e177]:
+            - link "Define Leave Types" [ref=f1e178]:
+              - /url: lib/controllers/CentralController.php?leavecode=Leave&action=Leave_Type_Summary
+          - listitem [ref=f1e180]:
+            - link "Assign Leave" [ref=f1e181]:
+              - /url: lib/controllers/CentralController.php?leavecode=Leave&action=Leave_Apply_Admin_view
+          - listitem [ref=f1e183]:
+            - link "Leave List" [ref=f1e184]:
+              - /url: lib/controllers/CentralController.php?leavecode=Leave&action=Leave_FetchLeaveAdmin&NewQuery=1
+      - listitem [ref=f1e186] [cursor=pointer]:
+        - link "Time" [ref=f1e187]:
+          - /url: ./index.php?menu_no_top=time
+        - list [ref=f1e189]:
+          - listitem [ref=f1e190]:
+            - link "Timesheets" [ref=f1e191]:
+              - /url: lib/controllers/CentralController.php?timecode=Time&action=View_Select_Employee
+            - list [ref=f1e193]:
+              - listitem [ref=f1e194]:
+                - link "Print Timesheets" [ref=f1e195]:
+                  - /url: lib/controllers/CentralController.php?timecode=Time&action=Select_Timesheets_View
+              - listitem [ref=f1e197]:
+                - link "Employee timesheets" [ref=f1e198]:
+                  - /url: lib/controllers/CentralController.php?timecode=Time&action=View_Select_Employee
+          - listitem [ref=f1e200]:
+            - link "Attendance" [ref=f1e201]:
+              - /url: lib/controllers/CentralController.php?timecode=Time&action=Show_Employee_Report
+            - list [ref=f1e203]:
+              - listitem [ref=f1e204]:
+                - link "Employee Reports" [ref=f1e205]:
+                  - /url: lib/controllers/CentralController.php?timecode=Time&action=Show_Employee_Report
+              - listitem [ref=f1e207]:
+                - link "Configuration" [ref=f1e208]:
+                  - /url: lib/controllers/CentralController.php?timecode=Time&action=Show_Attendance_Config
+          - listitem [ref=f1e210]:
+            - link "Employee Reports" [ref=f1e211]:
+              - /url: lib/controllers/CentralController.php?timecode=Time&action=Employee_Report_Define
+          - listitem [ref=f1e213]:
+            - link "Project Reports" [ref=f1e214]:
+              - /url: lib/controllers/CentralController.php?timecode=Time&action=Project_Report_Define
+          - listitem [ref=f1e216]:
+            - link "Work shifts" [ref=f1e217]:
+              - /url: lib/controllers/CentralController.php?timecode=Time&action=View_Work_Shifts
+      - listitem [ref=f1e219] [cursor=pointer]:
+        - link "Benefits" [ref=f1e220]:
+          - /url: ./index.php?menu_no_top=benefits
+        - list [ref=f1e222]:
+          - listitem [ref=f1e223]:
+            - link "Health savings plan" [ref=f1e224]:
+              - /url: lib/controllers/CentralController.php?benefitcode=Benefits&action=Hsp_Summary&year=2026
+            - list [ref=f1e226]:
+              - listitem [ref=f1e227]:
+                - link "Define HSP" [ref=f1e228]:
+                  - /url: lib/controllers/CentralController.php?benefitcode=Benefits&action=Define_Health_Savings_Plans
+              - listitem [ref=f1e230]:
+                - link "Employee HSP Summary" [ref=f1e231]:
+                  - /url: lib/controllers/CentralController.php?benefitcode=Benefits&action=Hsp_Summary&year=2026
+              - listitem [ref=f1e233]:
+                - link "HSP Payments Due" [ref=f1e234]:
+                  - /url: lib/controllers/CentralController.php?benefitcode=Benefits&action=List_Hsp_Due
+              - listitem [ref=f1e236]:
+                - link "HSP Expenditures" [ref=f1e237]:
+                  - /url: lib/controllers/CentralController.php?benefitcode=Benefits&action=Hsp_Expenditures_Select_Year_And_Employee
+              - listitem [ref=f1e239]:
+                - link "HSP Used" [ref=f1e240]:
+                  - /url: lib/controllers/CentralController.php?benefitcode=Benefits&action=Hsp_Used_Select_Year&year=2026
+          - listitem [ref=f1e242]:
+            - link "Payroll schedule" [ref=f1e243]:
+              - /url: lib/controllers/CentralController.php?benefitcode=Benefits&action=Benefits_Schedule_Select_Year
+            - list [ref=f1e245]:
+              - listitem [ref=f1e246]:
+                - link "View Payroll Schedule" [ref=f1e247]:
+                  - /url: lib/controllers/CentralController.php?benefitcode=Benefits&action=Benefits_Schedule_Select_Year
+              - listitem [ref=f1e249]:
+                - link "Add Pay Period" [ref=f1e250]:
+                  - /url: lib/controllers/CentralController.php?benefitcode=Benefits&action=View_Add_Pay_Period
+      - listitem [ref=f1e252] [cursor=pointer]:
+        - link "Recruitment" [ref=f1e253]:
+          - /url: ./index.php?menu_no_top=recruit
+        - list [ref=f1e255]:
+          - listitem [ref=f1e256]:
+            - link "Job Vacancies" [ref=f1e257]:
+              - /url: lib/controllers/CentralController.php?recruitcode=Vacancy&action=List
+          - listitem [ref=f1e259]:
+            - link "Applicants" [ref=f1e260]:
+              - /url: lib/controllers/CentralController.php?recruitcode=Application&action=List
+      - listitem [ref=f1e262] [cursor=pointer]:
+        - link "Performance" [ref=f1e263]:
+          - /url: index.php?uniqcode=KPI&menu_no_top=eim&uri=./symfony/web/index.php/performance/viewReview/mode/new
+        - list [ref=f1e265]:
+          - listitem [ref=f1e266]:
+            - link "KPI List" [ref=f1e267]:
+              - /url: index.php?uniqcode=KPI&menu_no_top=performance&uri=./symfony/web/index.php/performance/listDefineKpi
+          - listitem [ref=f1e269]:
+            - link "Add KPI" [ref=f1e270]:
+              - /url: index.php?uniqcode=KPI&menu_no_top=performance&uri=./symfony/web/index.php/performance/saveKpi
+          - listitem [ref=f1e272]:
+            - link "Copy KPI" [ref=f1e273]:
+              - /url: index.php?uniqcode=KPI&menu_no_top=performance&uri=./symfony/web/index.php/performance/copyKpi
+          - listitem [ref=f1e275]:
+            - link "Add Review" [ref=f1e276]:
+              - /url: index.php?uniqcode=KPI&menu_no_top=performance&uri=./symfony/web/index.php/performance/saveReview
+          - listitem [ref=f1e278]:
+            - link "Reviews" [ref=f1e279]:
+              - /url: index.php?uniqcode=KPI&menu_no_top=performance&uri=./symfony/web/index.php/performance/viewReview/mode/new
+      - listitem [ref=f1e281] [cursor=pointer]:
+        - link "Reports" [ref=f1e282]:
+          - /url: ./index.php?menu_no_top=rep
+        - list [ref=f1e284]:
+          - listitem [ref=f1e285]:
+            - link "View Reports" [ref=f1e286]:
+              - /url: index.php?repcode=EMPVIEW&menu_no_top=rep
+          - listitem [ref=f1e288]:
+            - link "Define Reports" [ref=f1e289]:
+              - /url: index.php?repcode=EMPDEF&menu_no_top=rep
+      - listitem [ref=f1e291] [cursor=pointer]:
+        - link "Bug Tracker" [ref=f1e292]:
+          - /url: ./index.php?menu_no_top=bug
+      - listitem [ref=f1e294] [cursor=pointer]:
+        - link "Help" [ref=f1e295]:
+          - /url: "#"
+        - list [ref=f1e297]:
+          - listitem [ref=f1e298]:
+            - link "Help Contents" [ref=f1e299]:
+              - /url: help.php
+          - listitem [ref=f1e301]:
+            - link "Support" [ref=f1e302]:
+              - /url: http://www.orangehrm.com/subscribe-support.shtml
+          - listitem [ref=f1e304]:
+            - link "Forum" [ref=f1e305]:
+              - /url: http://www.orangehrm.com/forum/
+          - listitem [ref=f1e307]:
+            - link "Blog" [ref=f1e308]:
+              - /url: http://www.orangehrm.com/blog/
+  - iframe [ref=f1e311]:
+    - generic [ref=f2e8]:
+      - heading "Employee Information" [level=2] [ref=f2e10]
+      - generic [ref=f2e11]:
+        - generic [ref=f2e12]: "Search By:"
+        - combobox "Search By:" [ref=f2e13]:
+          - option "-Select-" [selected]
+          - option "Emp. ID"
+          - option "Emp. First Name"
+          - option "Emp. Last Name"
+          - option "Emp. Middle Name"
+          - option "Job Title"
+          - option "Employment status"
+          - option "Sub-Division"
+          - option "Supervisor"
+        - generic [ref=f2e14]: "Search For:"
+        - textbox "Search For:" [ref=f2e15]
+        - button "Search" [ref=f2e16]
+        - button "Reset" [ref=f2e17]
+      - generic [ref=f2e18]:
+        - generic [ref=f2e19]:
+          - button "Add" [ref=f2e20]
+          - button "Delete" [ref=f2e21]
+        - generic [ref=f2e22]:
+          - text: First Previous 1
+          - link "2" [ref=f2e23] [cursor=pointer]:
+            - /url: javascript:chgPage(2);
+          - link "3" [ref=f2e24] [cursor=pointer]:
+            - /url: javascript:chgPage(3);
+          - link "4" [ref=f2e25] [cursor=pointer]:
+            - /url: javascript:chgPage(4);
+          - link "5" [ref=f2e26] [cursor=pointer]:
+            - /url: javascript:chgPage(5);
+          - link "6" [ref=f2e27] [cursor=pointer]:
+            - /url: javascript:chgPage(6);
+          - link "Next" [ref=f2e28] [cursor=pointer]:
+            - /url: javascript:nextPage();
+          - link "Last" [ref=f2e29] [cursor=pointer]:
+            - /url: javascript:chgPage(97);
+      - table [ref=f2e30]:
+        - rowgroup [ref=f2e31]:
+          - row [ref=f2e32]:
+            - cell [ref=f2e33]:
+              - checkbox [ref=f2e34]
+            - cell [ref=f2e35]:
+              - link "Employee Id" [ref=f2e36] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f2e37]:
+              - link "Employee Name" [ref=f2e38] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f2e39]:
+              - link "Job Title" [ref=f2e40] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f2e41]:
+              - link "Employment status" [ref=f2e42] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f2e43]:
+              - link "Sub-Division" [ref=f2e44] [cursor=pointer]:
+                - /url: "#"
+            - cell [ref=f2e45]:
+              - link "Supervisor" [ref=f2e46] [cursor=pointer]:
+                - /url: "#"
+        - rowgroup [ref=f2e47]:
+          - row [ref=f2e48]:
+            - cell [ref=f2e49]:
+              - checkbox [ref=f2e50]
+            - cell "11257" [ref=f2e51]
+            - cell [ref=f2e52]:
+              - link "Abhijeet kale" [ref=f2e53] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11257&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e54]
+            - cell "-" [ref=f2e55]
+            - cell "-" [ref=f2e56]
+            - cell "-" [ref=f2e57]
+          - row [ref=f2e58]:
+            - cell [ref=f2e59]:
+              - checkbox [ref=f2e60]
+            - cell "11258" [ref=f2e61]
+            - cell [ref=f2e62]:
+              - link "Nandkumar Jagtap" [ref=f2e63] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11258&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e64]
+            - cell "-" [ref=f2e65]
+            - cell "-" [ref=f2e66]
+            - cell "-" [ref=f2e67]
+          - row [ref=f2e68]:
+            - cell [ref=f2e69]:
+              - checkbox [ref=f2e70]
+            - cell "11259" [ref=f2e71]
+            - cell [ref=f2e72]:
+              - link "Nandkumar Jagtap" [ref=f2e73] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11259&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e74]
+            - cell "-" [ref=f2e75]
+            - cell "-" [ref=f2e76]
+            - cell "-" [ref=f2e77]
+          - row [ref=f2e78]:
+            - cell [ref=f2e79]:
+              - checkbox [ref=f2e80]
+            - cell "11260" [ref=f2e81]
+            - cell [ref=f2e82]:
+              - link "API_Siva API_Siva" [ref=f2e83] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11260&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e84]
+            - cell "-" [ref=f2e85]
+            - cell "-" [ref=f2e86]
+            - cell "-" [ref=f2e87]
+          - row [ref=f2e88]:
+            - cell [ref=f2e89]:
+              - checkbox [ref=f2e90]
+            - cell "11261" [ref=f2e91]
+            - cell [ref=f2e92]:
+              - link "Ajitesh Singh" [ref=f2e93] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11261&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e94]
+            - cell "-" [ref=f2e95]
+            - cell "-" [ref=f2e96]
+            - cell "-" [ref=f2e97]
+          - row [ref=f2e98]:
+            - cell [ref=f2e99]:
+              - checkbox [ref=f2e100]
+            - cell "11263" [ref=f2e101]
+            - cell [ref=f2e102]:
+              - link "Ajitesh Singh" [ref=f2e103] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11263&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e104]
+            - cell "-" [ref=f2e105]
+            - cell "-" [ref=f2e106]
+            - cell "-" [ref=f2e107]
+          - row [ref=f2e108]:
+            - cell [ref=f2e109]:
+              - checkbox [ref=f2e110]
+            - cell "11264" [ref=f2e111]
+            - cell [ref=f2e112]:
+              - link "Ajitesh Singh" [ref=f2e113] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11264&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e114]
+            - cell "-" [ref=f2e115]
+            - cell "-" [ref=f2e116]
+            - cell "-" [ref=f2e117]
+          - row [ref=f2e118]:
+            - cell [ref=f2e119]:
+              - checkbox [ref=f2e120]
+            - cell "11265" [ref=f2e121]
+            - cell [ref=f2e122]:
+              - link "Ajitesh Singh" [ref=f2e123] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11265&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e124]
+            - cell "-" [ref=f2e125]
+            - cell "-" [ref=f2e126]
+            - cell "-" [ref=f2e127]
+          - row [ref=f2e128]:
+            - cell [ref=f2e129]:
+              - checkbox [ref=f2e130]
+            - cell "11266" [ref=f2e131]
+            - cell [ref=f2e132]:
+              - link "Rohitt Hello NewTest" [ref=f2e133] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11266&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e134]
+            - cell "-" [ref=f2e135]
+            - cell "-" [ref=f2e136]
+            - cell "-" [ref=f2e137]
+          - row [ref=f2e138]:
+            - cell [ref=f2e139]:
+              - checkbox [ref=f2e140]
+            - cell "11267" [ref=f2e141]
+            - cell [ref=f2e142]:
+              - link "suresh Ameerpet" [ref=f2e143] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11267&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e144]
+            - cell "-" [ref=f2e145]
+            - cell "-" [ref=f2e146]
+            - cell "-" [ref=f2e147]
+          - row [ref=f2e148]:
+            - cell [ref=f2e149]:
+              - checkbox [ref=f2e150]
+            - cell "11268" [ref=f2e151]
+            - cell [ref=f2e152]:
+              - link "suresh Ameerpet" [ref=f2e153] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11268&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e154]
+            - cell "-" [ref=f2e155]
+            - cell "-" [ref=f2e156]
+            - cell "-" [ref=f2e157]
+          - row [ref=f2e158]:
+            - cell [ref=f2e159]:
+              - checkbox [ref=f2e160]
+            - cell "11269" [ref=f2e161]
+            - cell [ref=f2e162]:
+              - link "Shilpa k Infosys" [ref=f2e163] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11269&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "Testing" [ref=f2e164]
+            - cell "-" [ref=f2e165]
+            - cell "-" [ref=f2e166]
+            - cell "-" [ref=f2e167]
+          - row [ref=f2e168]:
+            - cell [ref=f2e169]:
+              - checkbox [ref=f2e170]
+            - cell "11270" [ref=f2e171]
+            - cell [ref=f2e172]:
+              - link "Suresh Hyderabad" [ref=f2e173] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11270&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e174]
+            - cell "-" [ref=f2e175]
+            - cell "-" [ref=f2e176]
+            - cell "-" [ref=f2e177]
+          - row [ref=f2e178]:
+            - cell [ref=f2e179]:
+              - checkbox [ref=f2e180]
+            - cell "11271" [ref=f2e181]
+            - cell [ref=f2e182]:
+              - link "Suresh Hyderabad" [ref=f2e183] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11271&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e184]
+            - cell "-" [ref=f2e185]
+            - cell "-" [ref=f2e186]
+            - cell "-" [ref=f2e187]
+          - row [ref=f2e188]:
+            - cell [ref=f2e189]:
+              - checkbox [ref=f2e190]
+            - cell "11272" [ref=f2e191]
+            - cell [ref=f2e192]:
+              - link "Manoranjan QA" [ref=f2e193] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11272&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e194]
+            - cell "-" [ref=f2e195]
+            - cell "-" [ref=f2e196]
+            - cell "-" [ref=f2e197]
+          - row [ref=f2e198]:
+            - cell [ref=f2e199]:
+              - checkbox [ref=f2e200]
+            - cell "11273" [ref=f2e201]
+            - cell [ref=f2e202]:
+              - link "Manoranjan QA" [ref=f2e203] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11273&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e204]
+            - cell "-" [ref=f2e205]
+            - cell "-" [ref=f2e206]
+            - cell "-" [ref=f2e207]
+          - row [ref=f2e208]:
+            - cell [ref=f2e209]:
+              - checkbox [ref=f2e210]
+            - cell "11274" [ref=f2e211]
+            - cell [ref=f2e212]:
+              - link "Suresh Ameerpet" [ref=f2e213] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11274&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e214]
+            - cell "-" [ref=f2e215]
+            - cell "-" [ref=f2e216]
+            - cell "-" [ref=f2e217]
+          - row [ref=f2e218]:
+            - cell [ref=f2e219]:
+              - checkbox [ref=f2e220]
+            - cell "11275" [ref=f2e221]
+            - cell [ref=f2e222]:
+              - link "Suresh Ameerpet" [ref=f2e223] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11275&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e224]
+            - cell "-" [ref=f2e225]
+            - cell "-" [ref=f2e226]
+            - cell "-" [ref=f2e227]
+          - row [ref=f2e228]:
+            - cell [ref=f2e229]:
+              - checkbox [ref=f2e230]
+            - cell "11276" [ref=f2e231]
+            - cell [ref=f2e232]:
+              - link "Suresh Ameerpet" [ref=f2e233] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11276&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e234]
+            - cell "-" [ref=f2e235]
+            - cell "-" [ref=f2e236]
+            - cell "-" [ref=f2e237]
+          - row [ref=f2e238]:
+            - cell [ref=f2e239]:
+              - checkbox [ref=f2e240]
+            - cell "11277" [ref=f2e241]
+            - cell [ref=f2e242]:
+              - link "Ganesh kumar" [ref=f2e243] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11277&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e244]
+            - cell "-" [ref=f2e245]
+            - cell "-" [ref=f2e246]
+            - cell "-" [ref=f2e247]
+          - row [ref=f2e248]:
+            - cell [ref=f2e249]:
+              - checkbox [ref=f2e250]
+            - cell "11278" [ref=f2e251]
+            - cell [ref=f2e252]:
+              - link "Ganesh kumar" [ref=f2e253] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11278&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e254]
+            - cell "-" [ref=f2e255]
+            - cell "-" [ref=f2e256]
+            - cell "-" [ref=f2e257]
+          - row [ref=f2e258]:
+            - cell [ref=f2e259]:
+              - checkbox [ref=f2e260]
+            - cell "11279" [ref=f2e261]
+            - cell [ref=f2e262]:
+              - link "Suresh Hyderabad" [ref=f2e263] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11279&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e264]
+            - cell "-" [ref=f2e265]
+            - cell "-" [ref=f2e266]
+            - cell "-" [ref=f2e267]
+          - row [ref=f2e268]:
+            - cell [ref=f2e269]:
+              - checkbox [ref=f2e270]
+            - cell "11280" [ref=f2e271]
+            - cell [ref=f2e272]:
+              - link "Suresh Hyderabad" [ref=f2e273] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11280&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e274]
+            - cell "-" [ref=f2e275]
+            - cell "-" [ref=f2e276]
+            - cell "-" [ref=f2e277]
+          - row [ref=f2e278]:
+            - cell [ref=f2e279]:
+              - checkbox [ref=f2e280]
+            - cell "11281" [ref=f2e281]
+            - cell [ref=f2e282]:
+              - link "Suresh Hyderabad" [ref=f2e283] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11281&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e284]
+            - cell "-" [ref=f2e285]
+            - cell "-" [ref=f2e286]
+            - cell "-" [ref=f2e287]
+          - row [ref=f2e288]:
+            - cell [ref=f2e289]:
+              - checkbox [ref=f2e290]
+            - cell "11282" [ref=f2e291]
+            - cell [ref=f2e292]:
+              - link "Suresh Hyderabad" [ref=f2e293] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11282&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e294]
+            - cell "-" [ref=f2e295]
+            - cell "-" [ref=f2e296]
+            - cell "-" [ref=f2e297]
+          - row [ref=f2e298]:
+            - cell [ref=f2e299]:
+              - checkbox [ref=f2e300]
+            - cell "11283" [ref=f2e301]
+            - cell [ref=f2e302]:
+              - link "Suresh Hyderabad" [ref=f2e303] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11283&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e304]
+            - cell "-" [ref=f2e305]
+            - cell "-" [ref=f2e306]
+            - cell "-" [ref=f2e307]
+          - row [ref=f2e308]:
+            - cell [ref=f2e309]:
+              - checkbox [ref=f2e310]
+            - cell "11284" [ref=f2e311]
+            - cell [ref=f2e312]:
+              - link "Suresh Hyderabad" [ref=f2e313] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11284&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e314]
+            - cell "-" [ref=f2e315]
+            - cell "-" [ref=f2e316]
+            - cell "-" [ref=f2e317]
+          - row [ref=f2e318]:
+            - cell [ref=f2e319]:
+              - checkbox [ref=f2e320]
+            - cell "11285" [ref=f2e321]
+            - cell [ref=f2e322]:
+              - link "Kiran Kumar" [ref=f2e323] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11285&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e324]
+            - cell "-" [ref=f2e325]
+            - cell "-" [ref=f2e326]
+            - cell "-" [ref=f2e327]
+          - row [ref=f2e328]:
+            - cell [ref=f2e329]:
+              - checkbox [ref=f2e330]
+            - cell "11286" [ref=f2e331]
+            - cell [ref=f2e332]:
+              - link "Suresh IT" [ref=f2e333] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11286&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e334]
+            - cell "-" [ref=f2e335]
+            - cell "-" [ref=f2e336]
+            - cell "-" [ref=f2e337]
+          - row [ref=f2e338]:
+            - cell [ref=f2e339]:
+              - checkbox [ref=f2e340]
+            - cell "11287" [ref=f2e341]
+            - cell [ref=f2e342]:
+              - link "Suresh IT" [ref=f2e343] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11287&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e344]
+            - cell "-" [ref=f2e345]
+            - cell "-" [ref=f2e346]
+            - cell "-" [ref=f2e347]
+          - row [ref=f2e348]:
+            - cell [ref=f2e349]:
+              - checkbox [ref=f2e350]
+            - cell "11288" [ref=f2e351]
+            - cell [ref=f2e352]:
+              - link "Suresh IT" [ref=f2e353] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11288&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e354]
+            - cell "-" [ref=f2e355]
+            - cell "-" [ref=f2e356]
+            - cell "-" [ref=f2e357]
+          - row [ref=f2e358]:
+            - cell [ref=f2e359]:
+              - checkbox [ref=f2e360]
+            - cell "11289" [ref=f2e361]
+            - cell [ref=f2e362]:
+              - link "Suresh IT" [ref=f2e363] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11289&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e364]
+            - cell "-" [ref=f2e365]
+            - cell "-" [ref=f2e366]
+            - cell "-" [ref=f2e367]
+          - row [ref=f2e368]:
+            - cell [ref=f2e369]:
+              - checkbox [ref=f2e370]
+            - cell "11290" [ref=f2e371]
+            - cell [ref=f2e372]:
+              - link "hyd frooty" [ref=f2e373] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11290&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e374]
+            - cell "-" [ref=f2e375]
+            - cell "-" [ref=f2e376]
+            - cell "-" [ref=f2e377]
+          - row [ref=f2e378]:
+            - cell [ref=f2e379]:
+              - checkbox [ref=f2e380]
+            - cell "11291" [ref=f2e381]
+            - cell [ref=f2e382]:
+              - link "hyd frooty" [ref=f2e383] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11291&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e384]
+            - cell "-" [ref=f2e385]
+            - cell "-" [ref=f2e386]
+            - cell "-" [ref=f2e387]
+          - row [ref=f2e388]:
+            - cell [ref=f2e389]:
+              - checkbox [ref=f2e390]
+            - cell "11292" [ref=f2e391]
+            - cell [ref=f2e392]:
+              - link "suresh Ameerpet" [ref=f2e393] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11292&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e394]
+            - cell "-" [ref=f2e395]
+            - cell "-" [ref=f2e396]
+            - cell "-" [ref=f2e397]
+          - row [ref=f2e398]:
+            - cell [ref=f2e399]:
+              - checkbox [ref=f2e400]
+            - cell "11293" [ref=f2e401]
+            - cell [ref=f2e402]:
+              - link "Suresh Hyderabad" [ref=f2e403] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11293&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e404]
+            - cell "-" [ref=f2e405]
+            - cell "-" [ref=f2e406]
+            - cell "-" [ref=f2e407]
+          - row [ref=f2e408]:
+            - cell [ref=f2e409]:
+              - checkbox [ref=f2e410]
+            - cell "11294" [ref=f2e411]
+            - cell [ref=f2e412]:
+              - link "Suresh Hyderabad" [ref=f2e413] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11294&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e414]
+            - cell "-" [ref=f2e415]
+            - cell "-" [ref=f2e416]
+            - cell "-" [ref=f2e417]
+          - row [ref=f2e418]:
+            - cell [ref=f2e419]:
+              - checkbox [ref=f2e420]
+            - cell "11295" [ref=f2e421]
+            - cell [ref=f2e422]:
+              - link "Suresh Hyderabad" [ref=f2e423] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11295&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e424]
+            - cell "-" [ref=f2e425]
+            - cell "-" [ref=f2e426]
+            - cell "-" [ref=f2e427]
+          - row [ref=f2e428]:
+            - cell [ref=f2e429]:
+              - checkbox [ref=f2e430]
+            - cell "11296" [ref=f2e431]
+            - cell [ref=f2e432]:
+              - link "Suresh Hyderabad" [ref=f2e433] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11296&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e434]
+            - cell "-" [ref=f2e435]
+            - cell "-" [ref=f2e436]
+            - cell "-" [ref=f2e437]
+          - row [ref=f2e438]:
+            - cell [ref=f2e439]:
+              - checkbox [ref=f2e440]
+            - cell "11297" [ref=f2e441]
+            - cell [ref=f2e442]:
+              - link "Suresh Hyderabad" [ref=f2e443] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11297&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e444]
+            - cell "-" [ref=f2e445]
+            - cell "-" [ref=f2e446]
+            - cell "-" [ref=f2e447]
+          - row [ref=f2e448]:
+            - cell [ref=f2e449]:
+              - checkbox [ref=f2e450]
+            - cell "11298" [ref=f2e451]
+            - cell [ref=f2e452]:
+              - link "Suresh Hyderabad" [ref=f2e453] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11298&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e454]
+            - cell "-" [ref=f2e455]
+            - cell "-" [ref=f2e456]
+            - cell "-" [ref=f2e457]
+          - row [ref=f2e458]:
+            - cell [ref=f2e459]:
+              - checkbox [ref=f2e460]
+            - cell "11299" [ref=f2e461]
+            - cell [ref=f2e462]:
+              - link "Suresh Hyderabad" [ref=f2e463] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11299&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e464]
+            - cell "-" [ref=f2e465]
+            - cell "-" [ref=f2e466]
+            - cell "-" [ref=f2e467]
+          - row [ref=f2e468]:
+            - cell [ref=f2e469]:
+              - checkbox [ref=f2e470]
+            - cell "11300" [ref=f2e471]
+            - cell [ref=f2e472]:
+              - link "Suresh Hyderabad" [ref=f2e473] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11300&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e474]
+            - cell "-" [ref=f2e475]
+            - cell "-" [ref=f2e476]
+            - cell "-" [ref=f2e477]
+          - row [ref=f2e478]:
+            - cell [ref=f2e479]:
+              - checkbox [ref=f2e480]
+            - cell "11301" [ref=f2e481]
+            - cell [ref=f2e482]:
+              - link "Ravi Prakash" [ref=f2e483] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11301&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e484]
+            - cell "-" [ref=f2e485]
+            - cell "-" [ref=f2e486]
+            - cell "-" [ref=f2e487]
+          - row [ref=f2e488]:
+            - cell [ref=f2e489]:
+              - checkbox [ref=f2e490]
+            - cell "11302" [ref=f2e491]
+            - cell [ref=f2e492]:
+              - link "Suresh Hyderabad" [ref=f2e493] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11302&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e494]
+            - cell "-" [ref=f2e495]
+            - cell "-" [ref=f2e496]
+            - cell "-" [ref=f2e497]
+          - row [ref=f2e498]:
+            - cell [ref=f2e499]:
+              - checkbox [ref=f2e500]
+            - cell "11303" [ref=f2e501]
+            - cell [ref=f2e502]:
+              - link "Suresh Hyderabad" [ref=f2e503] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11303&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e504]
+            - cell "-" [ref=f2e505]
+            - cell "-" [ref=f2e506]
+            - cell "-" [ref=f2e507]
+          - row [ref=f2e508]:
+            - cell [ref=f2e509]:
+              - checkbox [ref=f2e510]
+            - cell "11304" [ref=f2e511]
+            - cell [ref=f2e512]:
+              - link "Manoranjan QA" [ref=f2e513] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11304&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e514]
+            - cell "-" [ref=f2e515]
+            - cell "-" [ref=f2e516]
+            - cell "-" [ref=f2e517]
+          - row [ref=f2e518]:
+            - cell [ref=f2e519]:
+              - checkbox [ref=f2e520]
+            - cell "11305" [ref=f2e521]
+            - cell [ref=f2e522]:
+              - link "Suresh Ameerpet" [ref=f2e523] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11305&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e524]
+            - cell "-" [ref=f2e525]
+            - cell "-" [ref=f2e526]
+            - cell "-" [ref=f2e527]
+          - row [ref=f2e528]:
+            - cell [ref=f2e529]:
+              - checkbox [ref=f2e530]
+            - cell "11306" [ref=f2e531]
+            - cell [ref=f2e532]:
+              - link "Suresh Ameerpet" [ref=f2e533] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11306&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e534]
+            - cell "-" [ref=f2e535]
+            - cell "-" [ref=f2e536]
+            - cell "-" [ref=f2e537]
+          - row [ref=f2e538]:
+            - cell [ref=f2e539]:
+              - checkbox [ref=f2e540]
+            - cell "11307" [ref=f2e541]
+            - cell [ref=f2e542]:
+              - link "Suresh Ameerpet" [ref=f2e543] [cursor=pointer]:
+                - /url: ./CentralController.php?menu_no_top=hr&id=11307&capturemode=updatemode&reqcode=EMP&currentPage=1
+            - cell "-" [ref=f2e544]
+            - cell "-" [ref=f2e545]
+            - cell "-" [ref=f2e546]
+            - cell "-" [ref=f2e547]
+  - link "SureshIT" [ref=f1e313] [cursor=pointer]:
+    - /url: "#"
+```
+
+# Test source
+
+```ts
+  1  | 
+  2  | // To provide objects/locators and methods for the employee module
+  3  | 
+  4  | import {BaseClass} from "../utils/BaseClass";
+  5  | 
+  6  | export class EmpModule extends BaseClass {  
+  7  |    
+  8  |     // Locators/objects for the add employee page
+  9  |      static frame_empinfo : string = "//iframe[@id='rightMenu']";
+  10 |      static button_add : string = "//input[@value='Add']";
+  11 |      static text_firstname : string = "//input[@name='txtEmpFirstName']";
+  12 |      static text_lastname : string = "//input[@name='txtEmpLastName']";
+  13 |      static photo_upload : string = "#photofile";
+  14 |      static button_save : string = "//input[@value='Save']";   
+  15 |      
+  16 |      // Locators /object for the employee list page
+  17 | 
+  18 |      static search_By : string = "//select[@name='loc_code']";
+  19 |      static search_for : string ="//input[@name='loc_name']";
+  20 |      static search_button : string ="//input[@value='Search']";
+  21 | 
+  22 | 
+  23 |      
+  24 | 
+  25 |      static async addEmployee(firstname: string, lastname: string, photopath: string) {
+  26 |         await this.page.frameLocator(this.frame_empinfo).locator(this.button_add).click();
+  27 |         await this.page.frameLocator(this.frame_empinfo).locator(this.text_firstname).fill(firstname);
+  28 |         await this.page.frameLocator(this.frame_empinfo).locator(this.text_lastname).fill(lastname);
+  29 |         await this.page.frameLocator(this.frame_empinfo).locator(this.photo_upload).setInputFiles('C:\\Users\\user\\Downloads\\images.JPG');
+  30 |         await this.page.frameLocator(this.frame_empinfo).locator(this.button_save).click();
+  31 |         console.log("Employee added successfully");
+  32 |      }
+  33 |       // Methods for the add employee page
+  34 |      static async employeeList(searchBy: string, searchFor: string) {
+  35 | 
+> 36 |       await this.page.frameLocator(this.frame_empinfo).locator(this.search_By).selectOption({ value: searchBy });
+     |                                                                                ^ Error: locator.selectOption: Test timeout of 30000ms exceeded.
+  37 |       await this.page.frameLocator(this.frame_empinfo).locator(this.search_for).fill(searchFor);
+  38 |       await this.page.frameLocator(this.frame_empinfo).locator(this.search_button).click();
+  39 |       console.log("Employee searched successfully");
+  40 | 
+  41 | 
+  42 |      }
+  43 | }
+```
