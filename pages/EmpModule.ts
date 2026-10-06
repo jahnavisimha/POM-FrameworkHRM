@@ -26,7 +26,7 @@ export class EmpModule extends BaseClass {
         await this.page.frameLocator(this.frame_empinfo).locator(this.button_add).click();
         await this.page.frameLocator(this.frame_empinfo).locator(this.text_firstname).fill(firstname);
         await this.page.frameLocator(this.frame_empinfo).locator(this.text_lastname).fill(lastname);
-        await this.page.frameLocator(this.frame_empinfo).locator(this.photo_upload).setInputFiles('C:\\Users\\user\\Downloads\\images.JPG');
+        await this.page.frameLocator(this.frame_empinfo).locator(this.photo_upload).setInputFiles('D:\\images.JPG');
         await this.page.frameLocator(this.frame_empinfo).locator(this.button_save).click();
         console.log("Employee added successfully");
      }
