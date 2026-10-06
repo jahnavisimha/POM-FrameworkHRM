@@ -14,11 +14,7 @@ test('TC002 Add Employee', async ({ page }) => {
     await LoginPage.login("sureshit", "sureshit");
     await VerifyPage.verifyTitle("SureshIT");
     await CommonFun.waitstmt();
-<<<<<<< HEAD
-    await EmpModule.addEmployee("John", "simha", "D:\\images.JPG");
-=======
-    await EmpModule.addEmployee("John", "simha", "D:\\images.JPG");
->>>>>>> origin/main
+    await EmpModule.addEmployee("John", "simha", "POM-HRMFramework\\data\\images.JPG");
     await EmpModule.button_save;
     await CommonFun.waitstmt();
     await LogoutPage.logout();
