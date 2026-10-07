@@ -1,4 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","10601","TC003 search Employee","chromium","2026-10-01","passed","2026-10-01","","TC003.spec.ts","",""
-"","8399","TC001 Verify Title","chromium","2026-10-01","passed","2026-10-01","","TC001.spec.ts","",""
-"","11972","TC002 Add Employee","chromium","2026-10-01","passed","2026-10-01","","TC002.spec.ts","",""
+"","11260","TC001 Verify Title","chromium","2026-10-06","passed","2026-10-06","","TC001.spec.ts","",""
+"","11019","TC002 Add Employee","chromium","2026-10-06","passed","2026-10-06","","TC002.spec.ts","",""
+"","10067","TC003 search Employee","chromium","2026-10-06","passed","2026-10-06","","TC003.spec.ts","",""
